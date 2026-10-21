@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaiteros del Médano</title>
+    <style>
+        body {
+            background-color: #fdf6e3;
+            color: #333333;
+            font-family: sans-serif;
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+        h1 {
+            color: #b35900;
+            margin-bottom: 5px;
+        }
+        .lema {
+            font-style: italic;
+            color: #d93838;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .gaita-estrella {
+            background-color: #ffcc00;
+            color: #000000;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 3px solid #d93838;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tarjeta {
+            background-color: #ffffff;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            border: 1px solid #e0d7c6;
+        }
+        .tarjeta-evento {
+            background-color: #ffffff;
+            border: 2px solid #b35900;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 15px 0;
+            box-shadow: 0 4px 8px rgba(179, 89, 0, 0.15);
+        }
+        .caja-fecha {
+            background-color: #d93838;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .tarjeta-logros {
+            background: linear-gradient(135deg, #ffffff 0%, #fff8e7 100%);
+            border-left: 5px solid #ffcc00;
+            border-top: 1px solid #e0d7c6;
+            border-right: 1px solid #e0d7c6;
+            border-bottom: 1px solid #e0d7c6;
+            text-align: left;
+            padding: 18px;
+            border-radius: 12px;
+            margin: 15px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+        .tarjeta-logros h2 {
+            text-align: center;
+            color: #b35900;
+        }
+        .logro-item {
+            margin: 10px 0;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        .miembro {
+            background-color: #f7f0e0;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 15px;
+        }
+        .boton-aplausos {
+            background-color: #d93838;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transition: transform 0.1s ease;
+        }
+        .boton-aplausos:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🥁 Gaiteros del Médano</h1>
+    <p class="lema">"¡Gaiteando por Falcón!"</p>
+
+    <!-- GAITA ESTRELLA -->
+    <div class="gaita-estrella">
+        <h2>🌟 Gaita Estrella</h2>
+        <p><strong>"La Voy a Tocar A Pie"</strong></p>
+        <p>Nuestro tema principal con todo el sentimiento falconiano.</p>
+    </div>
+
+    <!-- PRÓXIMA PRESENTACIÓN -->
+    <div class="tarjeta-evento">
+        <h2>📅 Próxima Presentación</h2>
+        <p>¡Prepárate para disfrutar en vivo!</p>
+        <div class="caja-fecha">
+            🗓️ 16 / 11 / 2026
+        </div>
+    </div>
+
+    <!-- LOGROS E HISTORIA -->
+    <div class="tarjeta-logros">
+        <h2>🏆 Nuestra Historia y Logros</h2>
+        <div class="logro-item">
+            🎤 <strong>Miranda's Got Talent:</strong> Brillamos en el escenario del talento show escolar dejando el nombre de la gaita por lo alto.
+        </div>
+        <div class="logro-item">
+            ⭐ <strong>Tradición Falconiana:</strong> Llevando el ritmo de la gaita zuliana con pasión, juventud y mucha energía a cada rincón.
+        </div>
+    </div>
+
+    <!-- INTEGRANTES -->
+    <div class="tarjeta">
+        <h2>🎵 Integrantes del Grupo</h2>
+        <div class="miembro">🎸 <strong>Alejandro</strong> - Cuatro</div>
+        <div class="miembro">🎸 <strong>Santi</strong> - Cuatro</div>
+        <div class="miembro">🎸 <strong>Evander</strong> - Cuatro</div>
+        <div class="miembro">🥁 <strong>Mirian</strong> - Tambora</div>
+        <div class="miembro">🎙️ <strong>Daniel</strong> - Voz</div>
+        <div class="miembro">🎙️ <strong>Rodrigo</strong> - Voz</div>
+    </div>
+
+    <!-- INTERACTIVIDAD -->
+    <div class="tarjeta">
+        <h2>👏 Apoya a Gaiteros del Médano</h2>
+        <p>¿Te gusta nuestra gaita?</p>
+        <button class="boton-aplausos" onclick="darAplauso()">👏 Mandar Aplauso (<span id="contador">0</span>)</button>
+    </div>
+
+<strong>Thiana</strong> - Voz</div>
+        <div class="miembro">🎙️
+    <script>
+        
+        let aplausos = 0;
+        function darAplauso() {
+            aplausos++;
+            document.getElementById('contador').innerText = aplausos;
+        }
+    </script>
+
+</body>
+</html>
